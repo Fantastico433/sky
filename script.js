@@ -7,6 +7,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+//Parallax scrolling
+window.addEventListener('scroll', function() {
+    const scrollPosition = window.scrollY;
+    const heroSection = document.querySelector('.hero-section');
+    
+    // Apply parallax effect to the background position
+    heroSection.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
+});
 
 // Lazy loading images
 document.addEventListener("DOMContentLoaded", function () {
